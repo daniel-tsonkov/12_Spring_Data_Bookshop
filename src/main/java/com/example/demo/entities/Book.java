@@ -18,7 +18,7 @@ public class Book {
     @Column(length = 1000)
     private String description;
 
-    @Column(name = "edition_type")
+    @Column(name = "edition_type", nullable = false)
     private EditionType editionType;
 
 
@@ -30,7 +30,7 @@ public class Book {
     @Column(name = "release_date")
     private LocalDate releaseDate;
 
-    @Column(name = "age_restriction")
+    @Column(name = "age_restriction", nullable = false)
     private AgeRestriction ageRestriction;
 
     @ManyToOne
