@@ -31,4 +31,72 @@ public class Book {
 
     @Column(name = "age_restriction")
     private AgeRestriction ageRestriction;
+
+    public Book() {
+    }
+
+    //constructor
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public EditionType getEditionType() {
+        return this.editionType;
+    }
+
+    public void setEditionType(EditionType editionType) {
+        this.editionType = editionType;
+    }
+
+    public BigDecimal getPrice() {
+        return this.price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public int getCopies() {
+        return this.copies;
+    }
+
+    public void setCopies(int copies) {
+        this.copies = copies;
+    }
+
+    public LocalDate getReleaseDate() {
+        return this.releaseDate;
+    }
+
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
+    public AgeRestriction getAgeRestriction() {
+        return this.ageRestriction;
+    }
+
+    public void setAgeRestriction(AgeRestriction ageRestriction) {
+        this.ageRestriction = ageRestriction;
+    }
 }
