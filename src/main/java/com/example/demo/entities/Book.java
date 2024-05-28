@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity(name = "books")
 public class Book {
@@ -31,6 +32,12 @@ public class Book {
 
     @Column(name = "age_restriction")
     private AgeRestriction ageRestriction;
+
+    @ManyToOne
+    private Author author;
+
+    @ManyToMany
+    private Set<Category> categories;
 
     public Book() {
     }
@@ -98,5 +105,21 @@ public class Book {
 
     public void setAgeRestriction(AgeRestriction ageRestriction) {
         this.ageRestriction = ageRestriction;
+    }
+
+    public Author getAuthor() {
+        return this.author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public Set<Category> getCategories() {
+        return this.categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
 }
