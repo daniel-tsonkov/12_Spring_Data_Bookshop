@@ -17,6 +17,6 @@ public class ConsoleRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         //System.out.println("Starting....");
         this.seedService.seedAuthors();
-        //до 59:57
+        //до 1:34:03
     }
 }

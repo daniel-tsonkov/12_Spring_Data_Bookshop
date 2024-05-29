@@ -16,7 +16,7 @@ public class SeedServiceImpl implements SeedService {
     private static final String AUTHORS_FILE_PATH = RESOURCE_PATH + "/authors.txt";
 
     @Autowired
-    private AuthorRepository authorRepository; //до 1:30:00
+    private AuthorRepository authorRepository;
 
     @Override
     public void seedAuthors() throws IOException {
