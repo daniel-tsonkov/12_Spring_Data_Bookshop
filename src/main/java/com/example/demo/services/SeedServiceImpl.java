@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.entities.Author;
+import com.example.demo.repositories.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ public class SeedServiceImpl implements SeedService {
     private static final String AUTHORS_FILE_PATH = RESOURCE_PATH + "/authors.txt";
 
     @Autowired
-    private AuthorRepository //до 1:30:00
+    private AuthorRepository authorRepository; //до 1:30:00
 
     @Override
     public void seedAuthors() throws IOException {
